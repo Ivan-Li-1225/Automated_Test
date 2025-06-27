@@ -2,11 +2,13 @@ git init  //建立git資料夾
 
 rm -rf .git  //刪除git資料夾
 
+touch test.txt  // 新增檔案 (test.txt)
+
 git status  //顯示版控狀態
 
-git add <filename>　//將檔案加入暫存區
+git add <filename>　//將單一檔案加入暫存區 (索引)
 
-git add . // 將工作區所有檔案加入暫存區
+git add . // 將工作區所有檔案加入暫存區 (索引)
 
 .gitignore // 內含不需要 Git 版控的檔案名稱
 
@@ -14,18 +16,28 @@ git diff // 顯示現在工作區的檔案與上一版 / 暫存區的檔案的�
 
 git diff commit1 commit2  //比較兩個 commit 之間的不同之處
 
-git commit -m "messenge"  //將所有暫存區的檔案全部放入倉庫。messenge 是此次 commit 的說明
+git commit -m "messenge"  //將暫存區(索引)的檔案全部放入本地數據庫。
+
+====="messenge 是此次 commit 的說明"=====
+
 
 git log  // 顯示 commit 紀錄
 
-git log --oneline  //顯示簡潔 commit 紀錄
+git log --oneline  //顯示 commit 紀錄 (simple)
 
 git checkout commitID //回溯版本 (全碼或前七碼都可以)
 
 git checkout master  //切回到現在版本 
 
+git pull --rebase origin main  // 整合github雲端數據庫與本地數據庫資料
 
-- commit -
+git push -u origin main  // 將資料上傳至github雲端數據庫
+
+
+
+
+
+- commit_info -
 
 Commit message --> Create new folders
 
@@ -34,4 +46,10 @@ Extended description ->
 1. Create sub folder-1 : Back_platform Test
 2. Create sub folder-2 : v 3.0.3.1756 250514 
 3. Create sub folder-3 : Report
+
+
+
+
+
+
   
